@@ -295,11 +295,7 @@ const CONFIG = {
         {
           TITLE: '契稅試算',
           URL: 'https://www.etax.nat.gov.tw/etwmain/etw158w/53'
-        }
-         {
-          TITLE: '建物價額試算',
-          URL: 'https://w3.land.gov.taipei/query/calbuild/calbuild.asp'
-        }
+        }       
       ]
     },
     {

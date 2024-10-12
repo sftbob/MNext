@@ -284,17 +284,21 @@ const CONFIG = {
   // 页脚三列菜单组
   STARTER_FOOTER_LINK_GROUP: [
     {
-      TITLE: '建置區一',
+      TITLE: '線上資源',
       LINK_GROUP: [
-        { TITLE: '區一1', URL: '/' },
-        { TITLE: '區一2', URL: '/' },
+        { TITLE: '內政部實登查詢', URL: 'https://lvr.land.moi.gov.tw/' },
+        { TITLE: '地籍圖資查詢', URL: 'https://easymap.land.moi.gov.tw/Home' },
         {
-          TITLE: '區一3',
-          URL: ''
+          TITLE: '土增稅試算',
+          URL: 'https://www.etax.nat.gov.tw/etwmain/etw158w/51'
         },
         {
-          TITLE: '區一4',
-          URL: ''
+          TITLE: '契稅試算',
+          URL: 'https://www.etax.nat.gov.tw/etwmain/etw158w/53'
+        }
+         {
+          TITLE: '建物價額試算',
+          URL: 'https://w3.land.gov.taipei/query/calbuild/calbuild.asp'
         }
       ]
     },

@@ -64,7 +64,7 @@ const CONFIG = {
     '找一個替妳著想的房產顧問，以客戶的利益為優先。 <br /> <br /> 日子久了妳會發現，哖大師總能替妳做到最好',
   STARTER_ABOUT_BUTTON_TEXT: '認識我',
   STARTER_ABOUT_BUTTON_URL: 'https://www.notion.so/nccu520/117304513d0580b7b6b7d76dbfd2a857?pvs=4#118304513d05805ab372d7ff9dbe651c',
-  STARTER_ABOUT_IMAGE_1: 'https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4',
+  STARTER_ABOUT_IMAGE_1: 'https://unsplash.com/photos/a-wave-crashing-on-a-beach-xAX9gKqWH64',
   STARTER_ABOUT_IMAGE_2: 'https://images.unsplash.com/photo-1532795986-dbef1643a596?ixlib=rb-4.0.3&q=85&fm=jpg&crop=entropy&cs=srgb',
   STARTER_ABOUT_TIPS_1: '6億+業績達成',
   STARTER_ABOUT_TIPS_2: '群洋團隊',

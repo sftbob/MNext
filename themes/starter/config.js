@@ -299,11 +299,11 @@ const CONFIG = {
       ]
     },
     {
-      TITLE: '建置區二',
+      TITLE: '主題專欄',
       LINK_GROUP: [
         {
-          TITLE: '二',
-          URL: '/'
+          TITLE: '好書推薦',
+          URL: '/gbook'
         },
         {
           TITLE: '二',

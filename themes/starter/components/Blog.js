@@ -8,12 +8,15 @@ import Link from 'next/link'
  * @returns
  */
 export const Blog = ({ posts }) => {
+  // 新增：對文章進行排序，從最新開始顯示
+  const sortedPosts = posts?.slice().sort((a, b) => new Date(b.publishDate) - new Date(a.publishDate));
+
   return (
     <>
       {/* <!-- ====== Blog Section Start --> */}
       <section className='bg-white pb-10 pt-20 dark:bg-dark lg:pb-20 lg:pt-[120px]'>
         <div className='container mx-auto'>
-          {/* 区块标题文字 */}
+          {/* 區塊標題文字 */}
           <div className='-mx-4 flex flex-wrap justify-center'>
             <div className='w-full px-4'>
               <div className='mx-auto mb-[60px] max-w-[485px] text-center'>
@@ -31,9 +34,10 @@ export const Blog = ({ posts }) => {
               </div>
             </div>
           </div>
-          {/* 博客列表 此处优先展示3片文章 */}
+          {/* 博客列表 此處優先展示3片文章 */}
           <div className='-mx-4 flex flex-wrap'>
-            {posts?.map((item, index) => {
+            {/* 修改：使用排序後的文章列表 */}
+            {sortedPosts?.map((item, index) => {
               return (
                 <div key={index} className='w-full px-4 md:w-1/2 lg:w-1/3'>
                   <div

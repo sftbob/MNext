@@ -68,9 +68,9 @@ const CONFIG = {
   STARTER_ABOUT_BUTTON_URL: 'https://master.ponien.com/about',
   STARTER_ABOUT_IMAGE_1: '/images/starter/about/about-image-01.jpg',
   STARTER_ABOUT_IMAGE_2: '/images/starter/about/about-image-02.jpg',
-  STARTER_ABOUT_TIPS_1: '7000+',
-  STARTER_ABOUT_TIPS_2: '博客站点',
-  STARTER_ABOUT_TIPS_3: '正在线上运行',
+  STARTER_ABOUT_TIPS_1: '年度6億團隊業績',
+  STARTER_ABOUT_TIPS_2: '群洋團隊',
+  STARTER_ABOUT_TIPS_3: '累積紀錄持續中......',
 
   // 首页价格区块
   STARTER_PRICING_ENABLE: false, // 价格区块开关

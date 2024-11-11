@@ -63,7 +63,7 @@ const CONFIG = {
   STARTER_ABOUT_ENABLE: true, // ABOUT区块开关
   STARTER_ABOUT_TITLE: '您一定要有的一位朋友',
   STARTER_ABOUT_TEXT:
-    '房子是許多人畢生的積蓄，或是半生的奮鬥，我們銷售的不只是一間磚瓦水泥堆砌的房屋，更是一個承載人生喜怒哀樂的家',
+    '房子是許多人畢生的積蓄，或是半生的奮鬥，我們銷售的不只是一間磚瓦水泥堆砌的房屋，更是一個承載人生喜怒哀樂的家，每個人都需要一位您信任的房仲朋友，替您守護您畢生的心血，我們的工作是因為守護您的財富所以值得您付出服務費，替您考慮越多，對房仲人員來說才是真正有意義的事',
   STARTER_ABOUT_BUTTON_TEXT: '認識哖大師',
   STARTER_ABOUT_BUTTON_URL: 'https://master.ponien.com/about',
   STARTER_ABOUT_IMAGE_1: '/images/starter/about/about-image-01.jpg',

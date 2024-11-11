@@ -272,17 +272,17 @@ const CONFIG = {
   // 页脚三列菜单组
   STARTER_FOOTER_LINK_GROUP: [
     {
-      TITLE: '关于我们',
+      TITLE: '線上工具',
       LINK_GROUP: [
-        { TITLE: '官方主页', URL: '/#home' },
-        { TITLE: '操作文档', URL: 'https://docs.tangly1024.com/about' },
+        { TITLE: '實價登錄', URL: 'https://lvr.land.moi.gov.tw/' },
+        { TITLE: '稅務試算', URL: 'https://www.etax.nat.gov.tw/etwmain/online-service/tax-pre-calculation' },
         {
-          TITLE: '帮助支持',
-          URL: 'https://docs.tangly1024.com/article/how-to-question'
+          TITLE: '輻射屋查詢',
+          URL: 'https://ramdar.nusc.gov.tw/'
         },
         {
-          TITLE: '合作申请',
-          URL: 'https://docs.tangly1024.com/article/my-service'
+          TITLE: '地籍圖資',
+          URL: 'https://easymap.land.moi.gov.tw/Index'
         }
       ]
     },

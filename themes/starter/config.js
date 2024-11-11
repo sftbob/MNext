@@ -52,10 +52,10 @@ const CONFIG = {
   STARTER_FEATURE_3_TITLE_1: '投資法規', // 特性3
   STARTER_FEATURE_3_TEXT_1: '房地產交易，交給專家最安心！ 我們提供專業的法律與稅務諮詢，協助您順利完成國內外房地產交易。從市場分析、投資規劃到法律文件處理，我們全程為您把關，讓您無後顧之憂。', // 特性3
   STARTER_FEATURE_3_BUTTON_TEXT: '了解更多', // 特性3
-  STARTER_FEATURE_3_BUTTON_URL: 'https://docs.tangly1024.com/article/next-js', // 特性3
+  STARTER_FEATURE_3_BUTTON_URL: '', // 特性3
 
-  STARTER_FEATURE_4_TITLE_1: '便捷的写作体验', // 特性4
-  STARTER_FEATURE_4_TEXT_1: '只需在Notion笔记中编修，自动同步到网站', // 特性4
+  STARTER_FEATURE_4_TITLE_1: '加入大師', // 特性4
+  STARTER_FEATURE_4_TEXT_1: '想挑戰高薪？ 加入我們，成為頂尖豪宅銷售高手！新鮮人不怕沒經驗！ 我們提供完善的培訓，讓你快速上手。熱愛房地產，想與一群志同道合的人一起打拼嗎？ 歡迎加入我們的大家庭！', // 特性4
   STARTER_FEATURE_4_BUTTON_TEXT: '了解更多', // 特性4
   STARTER_FEATURE_4_BUTTON_URL: 'https://docs.tangly1024.com/about', // 特性4
 

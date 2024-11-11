@@ -115,7 +115,7 @@ const LayoutIndex = props => {
         </>
       )}
       {/* 联系方式 */}
-      {siteConfig('STARTER_CONTACT_ENABLE', true, CONFIG) && <Contact />}
+      {siteConfig('STARTER_CONTACT_ENABLE', false, CONFIG) && <Contact />}
 
       {/* 行动呼吁 */}
       {siteConfig('STARTER_CTA_ENABLE', true, CONFIG) && <CTA />}

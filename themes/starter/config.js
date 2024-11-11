@@ -40,17 +40,17 @@ const CONFIG = {
 
   STARTER_FEATURE_1_TITLE_1: '房屋銷售', // 特性1
   STARTER_FEATURE_1_TEXT_1: '專業團隊，全程陪伴。 我們提供客製化房屋銷售方案，從市場評估、行銷曝光到交易細節，讓您安心交託，輕鬆完成房屋買賣。', // 特性1
-  STARTER_FEATURE_1_BUTTON_TEXT: '了解更多', // 特性1
-  STARTER_FEATURE_1_BUTTON_URL: 'https://github.com/tangly1024/NotionNext', // 特性1
+  STARTER_FEATURE_1_BUTTON_TEXT: '案件瀏覽', // 特性1
+  STARTER_FEATURE_1_BUTTON_URL: 'https://master.ponien.com/onsale', // 特性1
 
-  STARTER_FEATURE_2_TITLE_1: '多种主题定制', // 特性2
-  STARTER_FEATURE_2_TEXT_1: '数十种主题,适用于不同场景，总有一款适合你', // 特性2
+  STARTER_FEATURE_2_TITLE_1: '案件租賃', // 特性2
+  STARTER_FEATURE_2_TEXT_1: '租屋大小事，交給我們！ 不論是房東想出租房屋，還是租客想找房子，我們都能為您提供專業的租賃服務，讓您省心又省力。', // 特性2
   STARTER_FEATURE_2_BUTTON_TEXT: '了解更多', // 特性2
   STARTER_FEATURE_2_BUTTON_URL:
-    'https://docs.tangly1024.com/article/notion-next-themes', // 特性2
+    'https://master.ponien.com', // 特性2
 
-  STARTER_FEATURE_3_TITLE_1: '优秀的性能', // 特性3
-  STARTER_FEATURE_3_TEXT_1: '基于NextJS开发，更快的响应速度，更好的SEO', // 特性3
+  STARTER_FEATURE_3_TITLE_1: '投資法規', // 特性3
+  STARTER_FEATURE_3_TEXT_1: '房地產交易，交給專家最安心！ 我們提供專業的法律與稅務諮詢，協助您順利完成國內外房地產交易。從市場分析、投資規劃到法律文件處理，我們全程為您把關，讓您無後顧之憂。', // 特性3
   STARTER_FEATURE_3_BUTTON_TEXT: '了解更多', // 特性3
   STARTER_FEATURE_3_BUTTON_URL: 'https://docs.tangly1024.com/article/next-js', // 特性3
 

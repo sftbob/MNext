@@ -54,10 +54,12 @@ const CONFIG = {
   STARTER_FEATURE_3_BUTTON_URL: '', // 特性3
 
   
-  STARTER_FEATURE_4_TITLE_1: '便捷的写作体验', // 特性4
-  STARTER_FEATURE_4_TEXT_1: '只需在Notion笔记中编修，自动同步到网站', // 特性4
-  STARTER_FEATURE_4_BUTTON_TEXT: '了解更多', // 特性4
-  STARTER_FEATURE_4_BUTTON_URL: 'https://docs.tangly1024.com/about', // 特性4
+  STARTER_FEATURE_4_TITLE_1: '加入大師', // 特性4
+ STARTER_FEATURE_4_TEXT_1: '想挑戰高薪？ 加入我們，成為頂尖豪宅銷售高手！\
+新鮮人不怕沒經驗！ 我們提供完善的培訓，讓你快速上手。\
+熱愛房地產，想與一群志同道合的人一起打拼嗎？ 歡迎加入我們的大家庭！',
+  STARTER_FEATURE_4_BUTTON_TEXT: '招募專線', // 特性4
+  STARTER_FEATURE_4_BUTTON_URL: ' ', // 特性4
 
   // 首页ABOUT区块
   STARTER_ABOUT_ENABLE: true, // ABOUT区块开关

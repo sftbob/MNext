@@ -61,11 +61,11 @@ const CONFIG = {
 
   // 首页ABOUT区块
   STARTER_ABOUT_ENABLE: true, // ABOUT区块开关
-  STARTER_ABOUT_TITLE: '您的委託,我們',
+  STARTER_ABOUT_TITLE: '您一定要有的一位朋友',
   STARTER_ABOUT_TEXT:
-    'NotionNext的愿景是帮助非技术人员的小白，最低成本、最快速地搭建自己的网站，帮助您将自己的产品与故事高效地传达给世界。 <br /> <br /> 功能强大的Notion笔记，简单快速的Vercel托管平台，组成一个简单的网站',
-  STARTER_ABOUT_BUTTON_TEXT: '了解更多',
-  STARTER_ABOUT_BUTTON_URL: 'https://docs.tangly1024.com/about',
+    '房子是許多人畢生的積蓄，或是半生的奮鬥，我們銷售的不只是一間磚瓦水泥堆砌的房屋，更是一個承載人生喜怒哀樂的家',
+  STARTER_ABOUT_BUTTON_TEXT: '認識哖大師',
+  STARTER_ABOUT_BUTTON_URL: 'https://master.ponien.com/about',
   STARTER_ABOUT_IMAGE_1: '/images/starter/about/about-image-01.jpg',
   STARTER_ABOUT_IMAGE_2: '/images/starter/about/about-image-02.jpg',
   STARTER_ABOUT_TIPS_1: '7000+',

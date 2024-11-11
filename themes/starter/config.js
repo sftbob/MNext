@@ -39,24 +39,26 @@ const CONFIG = {
     '全方位的仲介服務，您的房產顧問。 ', // 特性
 
   STARTER_FEATURE_1_TITLE_1: '房屋銷售', // 特性1
-  STARTER_FEATURE_1_TEXT_1: '３００人團隊聯賣，為您最快找到好買家', // 特性1
+  STARTER_FEATURE_1_TEXT_1: '專業團隊，全程陪伴。 我們提供客製化房屋銷售方案，從市場評估、行銷曝光到交易細節，讓您安心交託，輕鬆完成房屋買賣。', // 特性1
   STARTER_FEATURE_1_BUTTON_TEXT: '案件瀏覽', // 特性1
   STARTER_FEATURE_1_BUTTON_URL: 'https://master.ponien.com/onsale', // 特性1
 
-  STARTER_FEATURE_2_TITLE_1: '租賃媒合', // 特性2
-  STARTER_FEATURE_2_TEXT_1: '為您的房子找到合適的租客,針對租客的需求推薦合適的物件', // 特性2
+  STARTER_FEATURE_2_TITLE_1: '案件租賃', // 特性2
+  STARTER_FEATURE_2_TEXT_1: '租屋大小事，交給我們！ 不論是房東想出租房屋，還是租客想找房子，我們都能為您提供專業的租賃服務，讓您省心又省力。', // 特性2
   STARTER_FEATURE_2_BUTTON_TEXT: '', // 特性2
   STARTER_FEATURE_2_BUTTON_URL:
     '', // 特性2
 
   STARTER_FEATURE_3_TITLE_1: '投資法規', // 特性3
-  STARTER_FEATURE_3_TEXT_1: '文案待補', // 特性3
+  STARTER_FEATURE_3_TEXT_1: '房地產交易，交給專家最安心！ 我們提供專業的法律與稅務諮詢，協助您順利完成國內外房地產交易。從市場分析、投資規劃到法律文件處理，我們全程為您把關，讓您無後顧之憂。', // 特性3
   STARTER_FEATURE_3_BUTTON_TEXT: '法規資料', // 特性3
   STARTER_FEATURE_3_BUTTON_URL: '', // 特性3
 
   STARTER_FEATURE_4_TITLE_1: '加入大師', // 特性4
-  STARTER_FEATURE_4_TEXT_1: '誠徵夥伴一起打拼', // 特性4
-  STARTER_FEATURE_4_BUTTON_TEXT: '預約專線', // 特性4
+  STARTER_FEATURE_4_TEXT_1: '想挑戰高薪？ 加入我們，成為頂尖豪宅銷售高手！
+新鮮人不怕沒經驗！ 我們提供完善的培訓，讓你快速上手。
+熱愛房地產，想與一群志同道合的人一起打拼嗎？ 歡迎加入我們的大家庭！', // 特性4
+  STARTER_FEATURE_4_BUTTON_TEXT: '大師專線', // 特性4
   STARTER_FEATURE_4_BUTTON_URL: '', // 特性4
 
   // 首页ABOUT区块

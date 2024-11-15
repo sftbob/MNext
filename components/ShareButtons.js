@@ -35,6 +35,8 @@ import {
     TelegramShareButton,
     TumblrIcon,
     TumblrShareButton,
+    XIcon,
+    XShareButton,
     TwitterIcon,
     TwitterShareButton,
     VKIcon,

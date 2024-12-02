@@ -40,15 +40,19 @@ export default function PostHeader({ post, siteInfo, isDarkMode }) {
       <div
         className={`${isDarkMode ? 'bg-[#CA8A04]' : 'bg-[#0060e0]'} absolute top-0 w-full h-full py-10 flex justify-center items-center`}>
         {/* 文章背景图 */}
-//替換為HeaderImage
-<div
-className={`${isDarkMode ? 'bg-[#CA8A04]' : 'bg-[#0060e0]'} absolute top-0 w-full h-full py-10 flex justify-center items-center`}>
-style={{
-backgroundImage:'url(${headerImage})',//使用HeaderImage作為背景圖
-backgroundSize:'cover', //背景圖覆蓋整個容器
-backgroundPosition:'center' //背景圖居中顯示  
-}}>        
-</div>
+        <div
+          id='post-cover-wrapper'
+          style={{
+            filter: 'blur(15px)'
+          }}
+          className='coverdiv lg:opacity-50 lg:translate-x-96 lg:rotate-12'>
+          <LazyImage
+            id='post-cover'
+            className='w-full h-full object-cover max-h-[50rem] min-w-[50vw] min-h-[20rem]'
+            src={headerImage}
+          />
+        </div>
+
         {/* 文章文字描述 */}
         <div
           id='post-info'

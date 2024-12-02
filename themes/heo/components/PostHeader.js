@@ -48,7 +48,7 @@ backgroundImage:'url(${headerImage})',//使用HeaderImage作為背景圖
 backgroundSize:'cover', //背景圖覆蓋整個容器
 backgroundPosition:'center' //背景圖居中顯示  
 }}>        
-
+</div>
         {/* 文章文字描述 */}
         <div
           id='post-info'

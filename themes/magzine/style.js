@@ -22,7 +22,7 @@ const Style = () => {
       }
 
       html::-webkit-scrollbar-thumb {
-        background: #4e4e4e;
+        background: #007ea7;
       }
     `}</style>
   )

@@ -15,7 +15,7 @@ const CONFIG = {
   // 首页底部推荐文章标签, 例如 [推荐] , 最多六篇文章; 若留空白''，则推荐最近更新文章
   MAGZINE_RECOMMEND_POST_TAG: '推荐',
   MAGZINE_RECOMMEND_POST_COUNT: 6,
-  MAGZINE_RECOMMEND_POST_TITLE: '推荐文章',
+  MAGZINE_RECOMMEND_POST_TITLE: '推薦文章',
   MAGZINE_RECOMMEND_POST_SORT_BY_UPDATE_TIME: false, // 推荐文章排序，为`true`时将强制按最后修改时间倒序
 
   // Style
@@ -32,8 +32,8 @@ const CONFIG = {
   // 文章页面联系卡
   MAGZINE_SOCIAL_CARD: true, // 是否显示右侧，点击加入社群按钮
   MAGZINE_SOCIAL_CARD_TITLE_1: '交流频道',
-  MAGZINE_SOCIAL_CARD_TITLE_2: '加入社群讨论分享',
-  MAGZINE_SOCIAL_CARD_TITLE_3: '点击加入社群',
+  MAGZINE_SOCIAL_CARD_TITLE_2: '社群討論',
+  MAGZINE_SOCIAL_CARD_TITLE_3: '加入社群',
   MAGZINE_SOCIAL_CARD_URL: 'https://docs.tangly1024.com/article/chat-community',
 
   // 页脚菜单

@@ -1,4 +1,4 @@
-# 幫助
+# 幫助_
 
 访问帮助：[NotionNext帮助手册](https://docs.tangly1024.com/)
 

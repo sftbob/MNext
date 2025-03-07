@@ -287,33 +287,33 @@ const CONFIG = {
       ]
     },
     {
-      TITLE: '功能特性',
+      TITLE: '專區二',
       LINK_GROUP: [
         {
-          TITLE: '部署指南',
-          URL: 'https://docs.tangly1024.com/article/vercel-deploy-notion-next'
+          TITLE: 'A',
+          URL: 'https://master.ponien.com/'
         },
         {
-          TITLE: '升级指南',
-          URL: 'https://docs.tangly1024.com/article/how-to-update-notionnext'
+          TITLE: 'B',
+          URL: 'https://master.ponien.com/'
         },
-        { TITLE: '最新版本', URL: 'https://docs.tangly1024.com/article/latest' }
+        { TITLE: 'C', URL: 'https://master.ponien.com/' }
       ]
     },
     {
-      TITLE: 'Notion写作',
+      TITLE: '專區三',
       LINK_GROUP: [
         {
-          TITLE: 'Notion开始写作',
-          URL: 'https://docs.tangly1024.com/article/start-to-write'
+          TITLE: 'D',
+          URL: 'https://master.ponien.com/'
         },
         {
-          TITLE: '快捷键提升效率',
-          URL: 'https://docs.tangly1024.com/article/notion-short-key'
+          TITLE: 'E',
+          URL: 'https://master.ponien.com/'
         },
         {
-          TITLE: '中国大陆使用Notion',
-          URL: 'https://docs.tangly1024.com/article/notion-faster'
+          TITLE: 'F',
+          URL: 'https://master.ponien.com/'
         }
       ]
     }
@@ -331,8 +331,8 @@ const CONFIG = {
   STARTER_FOOTER_PRIVACY_TERMS_OF_SERVICE_URL: '/terms-of-use',
 
   // 404页面的提示语
-  STARTER_404_TITLE: '我们似乎找不到您要找的页面。',
-  STARTER_404_TEXT: '抱歉！您要查找的页面不存在。可能已经移动或删除。',
+  STARTER_404_TITLE: '狀況排除中!!。',
+  STARTER_404_TEXT: '抱歉！資料目前找不到，正在除錯。',
   STARTER_404_BACK: '回到主页',
 
   // 页面底部的行动呼吁模块

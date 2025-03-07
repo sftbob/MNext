@@ -213,7 +213,7 @@ const CONFIG = {
     '最新的文章都會出現在這裡喔~',
 
   // 联系模块
-  STARTER_CONTACT_ENABLE: true, // 联系模块开关
+  STARTER_CONTACT_ENABLE: false, // 联系模块开关
   STARTER_CONTACT_TITLE: '加入哖大師LINE官方帳號',
   STARTER_CONTACT_TEXT: '掌握最新消息',
   STARTER_CONTACT_LOCATION_TITLE: '大師房屋',

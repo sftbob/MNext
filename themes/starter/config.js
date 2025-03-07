@@ -213,13 +213,13 @@ const CONFIG = {
     '最新的文章都會出現在這裡喔~',
 
   // 联系模块
-  STARTER_CONTACT_ENABLE: false, // 联系模块开关
-  STARTER_CONTACT_TITLE: '联系我们',
-  STARTER_CONTACT_TEXT: '告诉我们您遇到的问题',
-  STARTER_CONTACT_LOCATION_TITLE: '我们的位置',
-  STARTER_CONTACT_LOCATION_TEXT: '中国，福建',
-  STARTER_CONTACT_EMAIL_TITLE: '我们如何帮助您？',
-  STARTER_CONTACT_EMAIL_TEXT: 'mail@tangly1024.com',
+  STARTER_CONTACT_ENABLE: true, // 联系模块开关
+  STARTER_CONTACT_TITLE: '加入哖大師LINE官方帳號',
+  STARTER_CONTACT_TEXT: '掌握最新消息',
+  STARTER_CONTACT_LOCATION_TITLE: '大師房屋',
+  STARTER_CONTACT_LOCATION_TEXT: '新北市，新店區中央路87號',
+  STARTER_CONTACT_EMAIL_TITLE: '點擊加入',
+  STARTER_CONTACT_EMAIL_TEXT: 'https://lin.ee/NMuriir',
 
   // 嵌入外部表单
   STARTER_CONTACT_MSG_EXTERNAL_URL: 'https://noteforms.com/forms/yfctc7', // 基于NoteForm创建，将留言数据存在Notion中

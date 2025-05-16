@@ -21,7 +21,7 @@ const CONFIG = {
   STARTER_HERO_BUTTON_2_ICON: '/images/starter/github.svg', // 英雄区按钮2的图标，不需要则留空
 
   // 英雄区配图，如需隐藏，改为空值即可 ''
-  STARTER_HERO_PREVIEW_IMAGE: '/images/starter/hero/sitecover01.jpg', // 产品预览图 ，默认读取public目录下图片
+  STARTER_HERO_PREVIEW_IMAGE: '/images/starter/hero/sitecover01.png', // 产品预览图 ，默认读取public目录下图片
   STARTER_HERO_BANNER_IMAGE: '', // hero区下方的全宽图
 
   // 顶部右侧导航暗流
@@ -66,8 +66,8 @@ const CONFIG = {
     '房子是許多人畢生的積蓄，或是半生的奮鬥，我們銷售的不只是一間磚瓦水泥堆砌的房屋，更是一個承載人生喜怒哀樂的家，每個人都需要一位您信任的房仲朋友，替您守護您畢生的心血，我們的工作是因為守護您的財富所以值得您付出服務費，替您考慮越多，對房仲人員來說才是真正有意義的事',
   STARTER_ABOUT_BUTTON_TEXT: '認識哖大師',
   STARTER_ABOUT_BUTTON_URL: 'https://master.ponien.com/about',
-  STARTER_ABOUT_IMAGE_1: '/images/starter/about/image05.jpg',
-  STARTER_ABOUT_IMAGE_2: '/images/starter/about/image06.jpg',
+  STARTER_ABOUT_IMAGE_1: '/images/starter/about/image01.jpg',
+  STARTER_ABOUT_IMAGE_2: '/images/starter/about/image02.jpg',
   STARTER_ABOUT_TIPS_1: '年度6億團隊業績',
   STARTER_ABOUT_TIPS_2: '群洋團隊',
   STARTER_ABOUT_TIPS_3: '累積紀錄持續中......',

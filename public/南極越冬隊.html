@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="zh-TW" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>日本南極越冬隊：科學與探索資訊圖表</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
+    <!-- Chosen Palette: Brilliant Blues -->
+    <!-- Application Structure Plan: The infographic follows a compelling narrative structure, designed for a seamless scroll-driven experience. It begins with a high-impact header featuring key statistics to hook the user. The story unfolds through distinct sections: 1. A historical timeline showcasing key milestones. 2. A deep dive into core scientific discoveries, using a grid layout to present multiple charts and data points clearly. 3. An exploration of life on the ice, featuring an interactive climate chart and a process flow diagram for psychological challenges. 4. A forward-looking summary of future goals. This thematic approach is more engaging for a general audience than the original report's academic structure, transforming dense information into an easily digestible and memorable journey. -->
+    <!-- Visualization & Content Choices: Data from the report is translated into optimal visual formats. 1. History: A vertical timeline (HTML/CSS) is used to tell the chronological story (Goal: Change). 2. Ozone Discovery: A Chart.js line chart visualizes the trend over time (Goal: Change). 3. Ice Core Data: A dual-axis Chart.js line chart shows the correlation between CO2 and temperature (Goal: Relationships). 4. Key Stats (Meteorites, Low Temp): Large numbers and icons (HTML/CSS, Unicode) make singular data points impactful (Goal: Inform). 5. Syowa Climate Data (Table 2): An interactive Chart.js bar chart allows users to compare monthly conditions (Goal: Compare). 6. Psychological Challenges (Table 3): A structured HTML/CSS flow diagram organizes complex cause-and-effect information (Goal: Organize). All choices adhere to the NO SVG/Mermaid constraint. -->
+    <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
+    <style>
+        body {
+            font-family: 'Noto Sans TC', sans-serif;
+            background-color: #F0F4F8; 
+            color: #102A43;
+        }
+        .bg-primary { background-color: #0B4F6C; }
+        .text-primary { color: #0B4F6C; }
+        .bg-accent { background-color: #01BAEF; }
+        .text-accent { color: #01BAEF; }
+        .border-accent { border-color: #01BAEF; }
+        .nav-link {
+            position: relative;
+            transition: color 0.3s;
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -4px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #01BAEF;
+            transition: width 0.3s;
+        }
+        .nav-link:hover::after, .nav-link.active::after {
+            width: 100%;
+        }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 300px;
+            max-height: 400px;
+        }
+        @media (min-width: 768px) {
+            .chart-container {
+                height: 350px;
+            }
+        }
+        .timeline-item .timeline-content {
+            transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
+        }
+        .timeline-item:hover .timeline-content {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+        .timeline-line::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 19px;
+            width: 4px;
+            background-color: #D9E2EC;
+            border-radius: 2px;
+        }
+        .timeline-dot {
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            background-color: white;
+            border: 5px solid #01BAEF;
+            z-index: 10;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+
+    <header class="bg-white/80 backdrop-blur-md shadow-sm sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <h1 class="text-xl md:text-2xl font-bold text-primary">日本南極探索</h1>
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="#hero" class="nav-link font-semibold text-gray-600 hover:text-accent">總覽</a>
+                <a href="#history" class="nav-link font-semibold text-gray-600 hover:text-accent">歷史</a>
+                <a href="#science" class="nav-link font-semibold text-gray-600 hover:text-accent">科學</a>
+                <a href="#life" class="nav-link font-semibold text-gray-600 hover:text-accent">生活</a>
+                <a href="#future" class="nav-link font-semibold text-gray-600 hover:text-accent">未來</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="hero" class="py-20 bg-primary text-white text-center">
+            <div class="container mx-auto px-6">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4">解鎖冰封大陸的秘密</h2>
+                <p class="max-w-3xl mx-auto text-lg text-gray-200 mb-12">自1956年以來，日本南極觀測隊在地球最嚴酷的環境中，持續進行科學探索，為理解全球氣候變遷提供了無可取代的數據。</p>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="bg-white/10 p-6 rounded-lg">
+                        <p class="text-5xl font-bold text-accent" data-counter-target="68">0</p>
+                        <p class="mt-2 font-semibold">年的持續探索</p>
+                    </div>
+                    <div class="bg-white/10 p-6 rounded-lg">
+                        <p class="text-5xl font-bold text-accent" data-counter-target="17000">0</p>
+                        <p class="mt-2 font-semibold">塊+ 南極隕石回收</p>
+                    </div>
+                    <div class="bg-white/10 p-6 rounded-lg">
+                        <p class="text-5xl font-bold text-accent" data-counter-target="720000">0</p>
+                        <p class="mt-2 font-semibold">年前的冰核紀錄</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="history" class="py-20">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl md:text-4xl font-bold text-primary">勇氣與奇蹟的篇章</h2>
+                    <p class="mt-4 max-w-2xl mx-auto text-gray-600">從戰後的艱難起步，到成為極地科學的領導者，日本的南極探索之路充滿了挑戰與感動人心的故事。</p>
+                </div>
+                <div class="relative max-w-4xl mx-auto timeline-line">
+                    <div class="timeline-item relative pl-16 pb-16">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content bg-white p-6 rounded-lg shadow-lg">
+                            <time class="font-bold text-accent">1957年</time>
+                            <h3 class="mt-2 text-xl font-bold">昭和基地的建立</h3>
+                            <p class="mt-2 text-gray-600">第一次越冬隊成功建立昭和基地，西堀榮三郎帶領11名隊員和19隻樺太犬，開啟了日本在南極的漫長征途。</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item relative pl-16 pb-16">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content bg-white p-6 rounded-lg shadow-lg">
+                            <time class="font-bold text-accent">1959年</time>
+                            <h3 class="mt-2 text-xl font-bold">太郎與次郎的奇蹟</h3>
+                            <p class="mt-2 text-gray-600">因惡劣天氣被遺棄的15隻樺太犬中，太郎與次郎在一年後奇蹟般存活。這個故事被改編成電影《南極物語》，感動了整個日本。</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item relative pl-16 pb-16">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content bg-white p-6 rounded-lg shadow-lg">
+                            <time class="font-bold text-accent">1982年</time>
+                            <h3 class="mt-2 text-xl font-bold">首次報告臭氧層破洞</h3>
+                            <p class="mt-2 text-gray-600">昭和基地的觀測數據成為史上首份關於臭氧層破洞的科學報告，直接促成了全球性的環保行動《蒙特婁議定書》。</p>
+                        </div>
+                    </div>
+                     <div class="timeline-item relative pl-16">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content bg-white p-6 rounded-lg shadow-lg">
+                            <time class="font-bold text-accent">2024年</time>
+                            <h3 class="mt-2 text-xl font-bold">女性領導力的里程碑</h3>
+                            <p class="mt-2 text-gray-600">日本南極研究隊迎來史上首位女性隊長與女性越冬隊長，標誌著極地探索領域正變得更加多元與包容。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="science" class="py-20 bg-gray-100">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl md:text-4xl font-bold text-primary">解讀地球的時光膠囊</h2>
+                    <p class="mt-4 max-w-2xl mx-auto text-gray-600">南極是研究地球過去與未來的天然實驗室。日本的科學家在這裡取得了多項世界級的成果。</p>
+                </div>
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                    <div class="bg-white p-6 rounded-lg shadow-lg">
+                        <h3 class="text-2xl font-bold text-primary mb-4">臭氧層的破壞與恢復</h3>
+                        <p class="text-gray-600 mb-6">日本的發現推動了全球環保進程。此圖表顯示了自1980年代以來，南極上空臭氧層濃度的變化趨勢。</p>
+                        <div class="chart-container h-72 md:h-80">
+                            <canvas id="ozoneChart"></canvas>
+                        </div>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-lg">
+                        <h3 class="text-2xl font-bold text-primary mb-4">72萬年的氣候變遷史</h3>
+                        <p class="text-gray-600 mb-6">從富士冰穹鑽取的冰核中，科學家重建了數十萬年的氣候歷史，揭示了二氧化碳濃度與地球溫度的緊密關聯。</p>
+                        <div class="chart-container h-72 md:h-80">
+                            <canvas id="iceCoreChart"></canvas>
+                        </div>
+                    </div>
+                     <div class="bg-white p-6 rounded-lg shadow-lg md:col-span-1 lg:col-span-2">
+                        <h3 class="text-2xl font-bold text-primary mb-4 text-center">冰下世界的秘密</h3>
+                        <p class="text-gray-600 mb-8 text-center max-w-3xl mx-auto">除了氣候，南極還隱藏著來自宇宙的信使和獨特的生態系統。</p>
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+                            <div class="p-4">
+                                <p class="text-6xl mb-4">☄️</p>
+                                <h4 class="text-xl font-bold">來自宇宙的禮物</h4>
+                                <p class="mt-2 text-gray-600">回收超過17,000塊南極隕石，包含來自月球和火星的樣本，為行星科學提供關鍵線索。</p>
+                            </div>
+                            <div class="p-4">
+                                <p class="text-6xl mb-4">🦐</p>
+                                <h4 class="text-xl font-bold">碳封存的功臣</h4>
+                                <p class="mt-2 text-gray-600">南極磷蝦每年將超過2000萬噸的碳帶入深海，在全球碳循環中扮演著至關重要的角色。</p>
+                            </div>
+                            <div class="p-4">
+                                <p class="text-6xl mb-4">🌿</p>
+                                <h4 class="text-xl font-bold">極地生命奇觀</h4>
+                                <p class="mt-2 text-gray-600">發現了在湖底生長的巨大「苔蘚柱」，為理解地球生命的起源與適應能力提供重要線索。</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="life" class="py-20">
+            <div class="container mx-auto px-6">
+                 <div class="text-center mb-16">
+                    <h2 class="text-3xl md:text-4xl font-bold text-primary">冰封世界中的日常</h2>
+                    <p class="mt-4 max-w-2xl mx-auto text-gray-600">越冬隊員不僅要對抗極端天氣，還要克服長期隔離帶來的心理挑戰。他們的日常生活是科學、技術與人類韌性的結合。</p>
+                </div>
+                <div class="grid grid-cols-1 lg:grid-cols-5 gap-8 items-center">
+                    <div class="lg:col-span-3 bg-white p-6 rounded-lg shadow-lg">
+                        <h3 class="text-2xl font-bold text-primary mb-4">昭和基地的氣候挑戰</h3>
+                        <p class="text-gray-600 mb-6">南極的氣候變化極端劇烈。下圖顯示了昭和基地一年中各月份的平均高溫、低溫和日照時數，感受氣候的嚴酷。</p>
+                        <div class="chart-container h-80">
+                           <canvas id="climateChart"></canvas>
+                        </div>
+                    </div>
+                     <div class="lg:col-span-2 text-center">
+                        <h3 class="text-2xl font-bold text-primary mb-4">克服「越冬綜合症」</h3>
+                        <p class="text-gray-600 mb-6">長期隔離會導致沮喪、失眠和人際緊張。隊員們發展出了一套有效的應對策略。</p>
+                        <div class="space-y-4 text-left">
+                            <div class="bg-gray-100 p-4 rounded-lg">
+                                <h4 class="font-bold text-primary">➤ 積極認知調整</h4>
+                                <p class="text-sm text-gray-600 mt-1">將南極生活視為難得的「旅行」，專注於工作，珍惜機會。</p>
+                            </div>
+                            <div class="bg-gray-100 p-4 rounded-lg">
+                                <h4 class="font-bold text-primary">➤ 能量轉移</h4>
+                                <p class="text-sm text-gray-600 mt-1">積極參與體育、學習和娛樂活動，轉移壓力，豐富生活。</p>
+                            </div>
+                             <div class="bg-gray-100 p-4 rounded-lg">
+                                <h4 class="font-bold text-primary">➤ 團隊文化建設</h4>
+                                <p class="text-sm text-gray-600 mt-1">隊員間相互幫助，組織集體活動，營造和諧互助的團隊氛圍。</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="future" class="py-20 bg-primary text-white">
+            <div class="container mx-auto px-6 text-center">
+                 <h2 class="text-3xl md:text-4xl font-bold mb-4">航向未來</h2>
+                 <p class="mt-4 max-w-2xl mx-auto text-gray-200 mb-12">日本的南極研究從未停歇，正朝著更宏大的目標邁進，致力於回答關於地球過去與未來的根本問題。</p>
+                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                    <div class="bg-white/20 p-8 rounded-lg">
+                        <h3 class="text-2xl font-bold text-accent mb-3">目標：百萬年冰核</h3>
+                        <p class="text-gray-100">計劃在2028年前鑽取到超過一百萬年的冰核，以揭示地球氣候更長週期的演變規律。</p>
+                    </div>
+                    <div class="bg-white/20 p-8 rounded-lg">
+                        <h3 class="text-2xl font-bold text-accent mb-3">監測冰棚融化</h3>
+                        <p class="text-gray-100">利用水下機器人與衛星技術，持續監測關鍵冰河，提高對未來海平面上升的預測準確性。</p>
+                    </div>
+                 </div>
+            </div>
+        </section>
+    </main>
+    
+    <footer class="bg-gray-800 text-gray-400 py-6 text-center">
+        <p class="text-sm">此資訊圖表基於「日本南極越冬隊」深度研究報告製作。</p>
+        <p class="text-xs mt-1">由 Gemini 生成</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+
+            const counterObserver = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const el = entry.target;
+                        const target = +el.getAttribute('data-counter-target');
+                        const duration = 2000;
+                        let current = 0;
+                        const stepTime = 20;
+                        const steps = duration / stepTime;
+                        const increment = target / steps;
+
+                        const timer = setInterval(() => {
+                            current += increment;
+                            if (current >= target) {
+                                clearInterval(timer);
+                                el.textContent = target.toLocaleString();
+                            } else {
+                                el.textContent = Math.ceil(current).toLocaleString();
+                            }
+                        }, stepTime);
+                        observer.unobserve(el);
+                    }
+                });
+            }, { threshold: 0.5 });
+
+            document.querySelectorAll('[data-counter-target]').forEach(counter => {
+                counterObserver.observe(counter);
+            });
+            
+            const navObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if(entry.isIntersecting){
+                        document.querySelectorAll('.nav-link').forEach(link => {
+                           link.classList.toggle('text-accent', link.getAttribute('href').split('#')[1] === entry.target.id);
+                        });
+                    }
+                });
+            }, { rootMargin: "-50% 0px -50% 0px" });
+
+            document.querySelectorAll('section').forEach(section => {
+                navObserver.observe(section);
+            });
+
+            const defaultChartOptions = {
+                maintainAspectRatio: false,
+                responsive: true,
+                plugins: {
+                    legend: {
+                        labels: {
+                            color: '#475569',
+                            font: { family: "'Noto Sans TC', sans-serif" }
+                        }
+                    },
+                    tooltip: {
+                        backgroundColor: '#102A43',
+                        titleColor: '#F0F4F8',
+                        bodyColor: '#D9E2EC',
+                        titleFont: { family: "'Noto Sans TC', sans-serif" },
+                        bodyFont: { family: "'Noto Sans TC', sans-serif" },
+                        callbacks: {
+                            title: function(tooltipItems) {
+                                const item = tooltipItems[0];
+                                let label = item.chart.data.labels[item.dataIndex];
+                                if (Array.isArray(label)) {
+                                  return label.join(' ');
+                                }
+                                return label;
+                            }
+                        }
+                    }
+                },
+                scales: {
+                    x: {
+                        ticks: { color: '#475569', font: { family: "'Noto Sans TC', sans-serif" }},
+                        grid: { color: '#e2e8f0' }
+                    },
+                    y: {
+                        ticks: { color: '#475569', font: { family: "'Noto Sans TC', sans-serif" }},
+                        grid: { color: '#e2e8f0' }
+                    }
+                }
+            };
+            
+            new Chart(document.getElementById('ozoneChart'), {
+                type: 'line',
+                data: {
+                    labels: ['1982', '1987', '1995', '2006', '2015', '2023'],
+                    datasets: [{
+                        label: '南極臭氧總量 (Dobson Unit)',
+                        data: [220, 180, 130, 100, 240, 255],
+                        borderColor: '#01BAEF',
+                        backgroundColor: 'rgba(1, 186, 239, 0.1)',
+                        fill: true,
+                        tension: 0.3
+                    }]
+                },
+                options: defaultChartOptions
+            });
+
+            new Chart(document.getElementById('iceCoreChart'), {
+                type: 'line',
+                data: {
+                    labels: ['72萬年前', '60萬年前', '40萬年前', '20萬年前', '現代'],
+                    datasets: [{
+                        label: 'CO2 濃度 (ppm)',
+                        data: [200, 220, 240, 260, 415],
+                        borderColor: '#01BAEF',
+                        backgroundColor: 'rgba(1, 186, 239, 0.1)',
+                        yAxisID: 'y',
+                        tension: 0.1
+                    }, {
+                        label: '相對溫度變化 (°C)',
+                        data: [-8, -6, -4, -3, 1],
+                        borderColor: '#F56565',
+                        backgroundColor: 'rgba(245, 101, 101, 0.1)',
+                        yAxisID: 'y1',
+                        tension: 0.1
+                    }]
+                },
+                options: {
+                     ...defaultChartOptions,
+                     scales: {
+                        ...defaultChartOptions.scales,
+                        y: { ...defaultChartOptions.scales.y, position: 'left', title: { display: true, text: 'CO2 (ppm)', color: '#01BAEF'}},
+                        y1: { ...defaultChartOptions.scales.y, position: 'right', grid: { drawOnChartArea: false }, title: { display: true, text: '溫度 (°C)', color: '#F56565'}}
+                     }
+                }
+            });
+
+            const climateData = {
+                labels: ["1月", "2月", "3月", "4月", "5月", "6月", "7月", "8月", "9月", "10月", "11月", "12月"],
+                avgHigh: [2.0, -0.5, -4.3, -7.6, -10.7, -12.1, -14.1, -15.8, -14.9, -10.8, -4.0, 1.1],
+                avgLow: [-3.7, -5.5, -9.2, -13.0, -16.6, -18.7, -20.8, -23.3, -22.0, -17.2, -10.4, -4.6],
+                sunlight: [375.7, 203.2, 120.1, 58.0, 17.7, 0.0, 4.8, 64.1, 136.5, 191.0, 316.0, 434.6]
+            };
+            new Chart(document.getElementById('climateChart'), {
+                type: 'bar',
+                data: {
+                    labels: climateData.labels,
+                    datasets: [
+                        {
+                            label: '平均高溫 °C',
+                            data: climateData.avgHigh,
+                            backgroundColor: '#75C5F0',
+                        },
+                        {
+                            label: '平均低溫 °C',
+                            data: climateData.avgLow,
+                            backgroundColor: '#01BAEF',
+                        },
+                        {
+                            label: '月均日照時數',
+                            data: climateData.sunlight,
+                            backgroundColor: '#FBBF24',
+                            yAxisID: 'y1',
+                        }
+                    ]
+                },
+                options: {
+                    ...defaultChartOptions,
+                    scales: {
+                        x: { stacked: true },
+                        y: { stacked: true, position: 'left', title: { display: true, text: '溫度 (°C)'}},
+                        y1: { position: 'right', grid: { drawOnChartArea: false }, title: { display: true, text: '日照時數 (h)'}}
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>

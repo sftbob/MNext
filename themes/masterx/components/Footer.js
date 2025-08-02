@@ -134,11 +134,11 @@ export const Footer = props => {
                   <p className='text-base text-gray-7'>
                     Designed and Developed by
                     <a
-                      href='https://github.com/tangly1024/NotionNext'
+                      href=''
                       rel='nofollow noopner noreferrer'
                       target='_blank'
                       className='px-1 text-gray-1 hover:underline'>
-                      NotionNext {siteConfig('VERSION')}
+                      網站核心版本 {siteConfig('VERSION')}
                     </a>
                   </p>
                 </div>

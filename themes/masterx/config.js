@@ -287,33 +287,33 @@ const CONFIG = {
       ]
     },
     {
-      TITLE: '功能特性',
+      TITLE: 'x',
       LINK_GROUP: [
         {
-          TITLE: '部署指南',
-          URL: 'https://docs.tangly1024.com/article/vercel-deploy-notion-next'
+          TITLE: '.',
+          URL: ' '
         },
         {
-          TITLE: '升級指南',
-          URL: 'https://docs.tangly1024.com/article/how-to-update-notionnext'
+          TITLE: '.',
+          URL: ''
         },
-        { TITLE: '最新版本', URL: 'https://docs.tangly1024.com/article/latest' }
+        { TITLE: '.', URL: '' }
       ]
     },
     {
-      TITLE: 'Notion寫作',
+      TITLE: 'Z',
       LINK_GROUP: [
         {
-          TITLE: 'Notion開始寫作',
-          URL: 'https://docs.tangly1024.com/article/start-to-write'
+          TITLE: '.',
+          URL: '  '
         },
         {
-          TITLE: '快速鍵提升效率',
-          URL: 'https://docs.tangly1024.com/article/notion-short-key'
+          TITLE: '.',
+          URL: ' '
         },
         {
-          TITLE: '中國大陸使用Notion',
-          URL: 'https://docs.tangly1024.com/article/notion-faster'
+          TITLE: '.',
+          URL: ' '
         }
       ]
     }
@@ -333,7 +333,7 @@ const CONFIG = {
   // 404頁面的提示語
   STARTER_404_TITLE: '我們似乎找不到您要找的頁面。',
   STARTER_404_TEXT: '抱歉！您要查找的頁面不存在。可能已經移動或刪除。',
-  STARTER_404_BACK: '回到主頁',
+  STARTER_404_BACK: '回到房仲哖大師主頁',
 
   // 頁面底部的行動呼籲模組
   STARTER_CTA_ENABLE: true,

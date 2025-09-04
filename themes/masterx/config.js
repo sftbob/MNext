@@ -287,32 +287,32 @@ const CONFIG = {
       ]
     },
     {
-      TITLE: 'x',
+      TITLE: '',
       LINK_GROUP: [
         {
-          TITLE: '.',
+          TITLE: '',
           URL: ' '
         },
         {
-          TITLE: '.',
+          TITLE: '',
           URL: ''
         },
-        { TITLE: '.', URL: '' }
+        { TITLE: '', URL: '' }
       ]
     },
     {
-      TITLE: 'Z',
+      TITLE: '',
       LINK_GROUP: [
         {
-          TITLE: '.',
+          TITLE: '',
           URL: '  '
         },
         {
-          TITLE: '.',
+          TITLE: '',
           URL: ' '
         },
         {
-          TITLE: '.',
+          TITLE: '',
           URL: ' '
         }
       ]

@@ -154,7 +154,9 @@ const ExternalPlugin = props => {
         const taskId = window.requestIdleCallback(callback)
         return () => window.cancelIdleCallback(taskId)
       }
-      const timeoutId = window.setTimeout(callback, 0)
+      const timeoutId = window.setTimeout(() => {
+        callback()
+      }, 0)
       return () => window.clearTimeout(timeoutId)
     }
 
@@ -203,7 +205,7 @@ const ExternalPlugin = props => {
         lang: lang
       })
     }, 500)
-  }, [router])
+  }, [router, ADSENSE_GOOGLE_ID, lang, props?.allLinkPages, props?.allNavPages])
 
   useEffect(() => {
     if (!isBrowser || !GLOBAL_JS || GLOBAL_JS.trim() === '') {
@@ -343,11 +345,11 @@ const ExternalPlugin = props => {
             async
             dangerouslySetInnerHTML={{
               __html: `
-             daovoice('init', {
-                app_id: "${COMMENT_DAO_VOICE_ID}"
-              });
-              daovoice('update');
-              `
+              daovoice('init', {
+                 app_id: "${COMMENT_DAO_VOICE_ID}"
+               });
+               daovoice('update');
+               `
             }}
           />
         </>
@@ -426,7 +428,7 @@ const ExternalPlugin = props => {
           async
           dangerouslySetInnerHTML={{
             __html: `
-          document.write(unescape("%3Cspan style='display:none' id='cnzz_stat_icon_${ANALYTICS_CNZZ_ID}'%3E%3C/span%3E%3Cscript src='https://s9.cnzz.com/z_stat.php%3Fid%3D${ANALYTICS_CNZZ_ID}' type='text/javascript'%3E%3C/script%3E"));
+          document.write(unescape("%3Cspan style='display:none' id='cnzz_stat_icon_${ANALYTICS_CNZZ_ID}'%3E%3C/span%3E%3Cscript src='https://s9.cnzz.com/z_stat.php%3Fid%3D${ANALYTICS_CNZZ_ID}' ty[...]
           `
           }}
         />

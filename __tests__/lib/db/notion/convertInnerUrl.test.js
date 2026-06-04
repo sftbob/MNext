@@ -1,5 +1,13 @@
 import { convertInnerUrl } from '@/lib/db/notion/convertInnerUrl'
 
+jest.mock('notion-utils', () => ({
+  idToUuid: id =>
+    id.replace(
+      /^(.{8})(.{4})(.{4})(.{4})(.{12})$/,
+      '$1-$2-$3-$4-$5'
+    )
+}))
+
 describe('convertInnerUrl', () => {
   beforeEach(() => {
     document.body.innerHTML = ''

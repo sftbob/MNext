@@ -44,7 +44,11 @@ const customJestConfig = {
   
   // Transform files
   transform: {
-    '^.+\\.(js|jsx|ts|tsx)$': ['babel-jest', { presets: ['next/babel'] }]
+    '^.+\\.(js|jsx|ts|tsx)$': ['babel-jest', { 
+      presets: ['next/babel'],
+      babelrc: false,
+      configFile: false
+    }]
   },
   
   // Transform ignore patterns

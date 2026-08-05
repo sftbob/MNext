@@ -4,10 +4,10 @@ import { siteConfig } from '@/lib/config'
  * 另一个落地页主题
  */
 const CONFIG = {
-  STARTER_COLOR_PRIMARY: '#3758f9',
-  STARTER_COLOR_PRIMARY_HOVER: '#1b44c8',
-  STARTER_COLOR_DARK: '#111928',
-  STARTER_COLOR_TEXT_MUTED: '#637381',
+  STARTER_COLOR_PRIMARY: '#a66f45',
+  STARTER_COLOR_PRIMARY_HOVER: '#895634',
+  STARTER_COLOR_DARK: '#332820',
+  STARTER_COLOR_TEXT_MUTED: '#74685f',
 
   // 默认只展示Logo文字，如果设置了logo图片，会在文字左侧显示图标
   STARTER_LOGO: '', // 普通logo图片 示例：/images/starter/logo/logo.svg
@@ -31,11 +31,11 @@ const CONFIG = {
   STARTER_HERO_BANNER_IMAGE: '', // hero区下方的全宽图
 
   // 顶部右侧导航暗流
-  STARTER_NAV_BUTTON_1_TEXT: 'Sign In',
-  STARTER_NAV_BUTTON_1_URL: '/sign-in',
+  STARTER_NAV_BUTTON_1_TEXT: '關於我',
+  STARTER_NAV_BUTTON_1_URL: '/about',
 
-  STARTER_NAV_BUTTON_2_TEXT: 'Sign Up',
-  STARTER_NAV_BUTTON_2_URL: '/sign-up',
+  STARTER_NAV_BUTTON_2_TEXT: '免費諮詢',
+  STARTER_NAV_BUTTON_2_URL: '/contact',
 
   // 特性区块
   STARTER_FEATURE_ENABLE: true, // 特性区块开关

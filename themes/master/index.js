@@ -7,19 +7,10 @@ import NotionPage from '@/components/NotionPage'
 import { isBrowser } from '@/lib/utils'
 import { useRouter } from 'next/router'
 import { useEffect } from 'react'
-import { About } from './components/About'
 import { BackToTopButton } from './components/BackToTopButton'
 import { Blog } from './components/Blog'
-import { Brand } from './components/Brand'
-import { Contact } from './components/Contact'
-import { FAQ } from './components/FAQ'
-import { Features } from './components/Features'
 import { Footer } from './components/Footer'
 import { Header } from './components/Header'
-import { Hero } from './components/Hero'
-import { Pricing } from './components/Pricing'
-import { Team } from './components/Team'
-import { Testimonials } from './components/Testimonials'
 import CONFIG, { starterConfig } from './config'
 import { Style } from './style'
 // import { MadeWithButton } from './components/MadeWithButton'
@@ -34,11 +25,11 @@ import { SignIn, SignUp } from '@clerk/nextjs'
 import SmartLink from '@/components/SmartLink'
 import { ArticleLock } from './components/ArticleLock'
 import { Banner } from './components/Banner'
-import { CTA } from './components/CTA'
 import SearchInput from './components/SearchInput'
 import { SignInForm } from './components/SignInForm'
 import { SignUpForm } from './components/SignUpForm'
 import { SVG404 } from './components/svg/SVG404'
+import { RealEstateHome } from './components/RealEstateHome'
 
 /**
  * 布局框架
@@ -50,7 +41,7 @@ import { SVG404 } from './components/svg/SVG404'
  */
 const LayoutBase = props => {
     const { children } = props
-    // 极简模式，会隐藏掉页头页脚等组件，便于嵌入网页等功能 
+    // 极简模式，会隐藏掉页头页脚等组件，便于嵌入网页等功能
     const { isLiteMode } = useGlobal()
     const router = useRouter()
 
@@ -83,7 +74,7 @@ const LayoutBase = props => {
             </div>
 
             {/* 页脚 */}
-            
+
             {isLiteMode ? <></> : <Footer {...props} />}
 
             {/* 悬浮按钮 */}
@@ -101,47 +92,8 @@ const LayoutBase = props => {
  */
 const LayoutIndex = props => {
   const count = starterConfig('STARTER_BLOG_COUNT', 3, CONFIG)
-  const { locale } = useGlobal()
   const posts = props?.allNavPages ? props.allNavPages.slice(0, count) : []
-  return (
-    <>
-      {/* 英雄区 */}
-      {starterConfig('STARTER_HERO_ENABLE', true, CONFIG) && <Hero {...props} />}
-      {/* 合作伙伴 */}
-      {starterConfig('STARTER_BRANDS_ENABLE', true, CONFIG) && <Brand />}
-      {/* 产品特性 */}
-      {starterConfig('STARTER_FEATURE_ENABLE', true, CONFIG) && <Features />}
-      {/* 关于 */}
-      {starterConfig('STARTER_ABOUT_ENABLE', true, CONFIG) && <About />}
-      {/* 价格 */}
-      {starterConfig('STARTER_PRICING_ENABLE', true, CONFIG) && <Pricing />}
-      {/* 评价展示 */}
-      {starterConfig('STARTER_TESTIMONIALS_ENABLE', true, CONFIG) && (
-        <Testimonials />
-      )}
-      {/* 常见问题 */}
-      {starterConfig('STARTER_FAQ_ENABLE', true, CONFIG) && <FAQ />}
-      {/* 团队介绍 */}
-      {starterConfig('STARTER_TEAM_ENABLE', true, CONFIG) && <Team />}
-      {/* 博文列表 */}
-      {starterConfig('STARTER_BLOG_ENABLE', true, CONFIG) && (
-        <>
-          <Blog posts={posts} />
-          <div className='container mx-auto flex justify-end mb-4'>
-            <SmartLink className='text-lg underline' href={'/archive'}>
-              <span>{locale.COMMON.MORE}</span>
-              <i className='ml-2 fas fa-arrow-right' />
-            </SmartLink>
-          </div>
-        </>
-      )}
-      {/* 联系方式 */}
-      {starterConfig('STARTER_CONTACT_ENABLE', true, CONFIG) && <Contact />}
-
-      {/* 行动呼吁 */}
-      {starterConfig('STARTER_CTA_ENABLE', true, CONFIG) && <CTA />}
-    </>
-  )
+  return <RealEstateHome posts={posts} />
 }
 
 /**
